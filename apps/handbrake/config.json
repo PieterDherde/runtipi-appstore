@@ -15,18 +15,18 @@
   "supported_architectures": ["amd64"],
   "form_fields": [
     {
-      "type": "number",
-      "label": "Enable authentication for the web UI? (0 = No, 1 = Yes)",
+      "type": "boolean",
+      "label": "Enable authentication for the web UI?",
       "default": 1,
       "env_variable": "WEB_AUTHENTICATION"
     },
     {
-      "type": "string",
+      "type": "text",
       "label": "Web UI username",
       "env_variable": "WEB_AUTHENTICATION_USERNAME"
     },
     {
-      "type": "string",
+      "type": "text",
       "label": "Web UI password",
       "env_variable": "WEB_AUTHENTICATION_PASSWORD"
     }
