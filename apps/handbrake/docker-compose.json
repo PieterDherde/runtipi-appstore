@@ -25,14 +25,14 @@
           "private": false
         },
         {
-          "hostPath": "{ROOT_FOLDER_HOST}/media/downloads/watch",
+          "hostPath": "${ROOT_FOLDER_HOST}/media/downloads/watch",
           "containerPath": "/watch",
           "readOnly": false,
           "shared": false,
           "private": false
         },
         {
-          "hostPath": "{ROOT_FOLDER_HOST}/media/data/",
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/",
           "containerPath": "/output",
           "readOnly": false,
           "shared": false,
