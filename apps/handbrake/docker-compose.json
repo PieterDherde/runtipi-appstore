@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "name": "handbrake",
+      "image": "jlesage/handbrake:v25.07.2",
+      "internalPort": 5800,
+      "environment": {
+          "WEB_AUTHENTICATION_USERNAME": "${WEB_AUTHENTICATION_USERNAME}",
+          "WEB_AUTHENTICATION_PASSWORD": "${WEB_AUTHENTICATION_PASSWORD}",
+          "WEB_AUTHENTICATION": "${WEB_AUTHENTICATION}"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/config",
+          "containerPath": "/config",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        },
+        {
+          "hostPath": "${ROOT_FOLDER_HOST}/media/",
+          "containerPath": "/storage",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        },
+        {
+          "hostPath": "{ROOT_FOLDER_HOST}/media/downloads/watch",
+          "containerPath": "/watch",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        },
+        {
+          "hostPath": "{ROOT_FOLDER_HOST}/media/data/",
+          "containerPath": "/output",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Handbrake",
+  "available": true,
+  "port": 5800,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "handbrake",
+  "description": "Efficient and highly configurable video encoder",
+  "tipi_version": 1,
+  "version": "25.07.2",
+  "categories": ["media"],
+  "short_desc": "Video encoding",
+  "author": "jlesage",
+  "source": "https://github.com/jlesage/docker-handbrake",
+  "supported_architectures": ["amd64"],
+  "form_fields": [
+    {
+      "type": "integer",
+      "label": "Enable authentication for the web UI? (0 = No, 1 = Yes)",
+      "default": 1,
+      "env_variable": "WEB_AUTHENTICATION"
+    },
+    {
+      "type": "string",
+      "label": "Web UI username",
+      "env_variable": "WEB_AUTHENTICATION_USERNAME"
+    },
+    {
+      "type": "string",
+      "label": "Web UI password",
+      "env_variable": "WEB_AUTHENTICATION_PASSWORD"
+    }
+  ],
+  "created_at": 1747165003,
+  "$schema": "../app-info-schema.json"
+}
